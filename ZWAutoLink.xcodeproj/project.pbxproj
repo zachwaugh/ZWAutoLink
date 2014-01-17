@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		924F6AB71889D55000E2A6B6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924F6AB61889D55000E2A6B6 /* XCTest.framework */; };
+		924F6AB81889D55000E2A6B6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924F6A971889D55000E2A6B6 /* Cocoa.framework */; };
+		924F6AC01889D55000E2A6B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 924F6ABE1889D55000E2A6B6 /* InfoPlist.strings */; };
+		924F6AC21889D55000E2A6B6 /* ZWAutoLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 924F6AC11889D55000E2A6B6 /* ZWAutoLinkTests.m */; };
+		924F6ACD1889D59100E2A6B6 /* ZWAutoLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 924F6ACC1889D59100E2A6B6 /* ZWAutoLink.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		924F6A971889D55000E2A6B6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		924F6A9A1889D55000E2A6B6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		924F6A9B1889D55000E2A6B6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		924F6A9C1889D55000E2A6B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		924F6AB51889D55000E2A6B6 /* ZWAutoLinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZWAutoLinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		924F6AB61889D55000E2A6B6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		924F6ABD1889D55000E2A6B6 /* ZWAutoLinkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZWAutoLinkTests-Info.plist"; sourceTree = "<group>"; };
+		924F6ABF1889D55000E2A6B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		924F6AC11889D55000E2A6B6 /* ZWAutoLinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWAutoLinkTests.m; sourceTree = "<group>"; };
+		924F6ACB1889D59100E2A6B6 /* ZWAutoLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWAutoLink.h; sourceTree = "<group>"; };
+		924F6ACC1889D59100E2A6B6 /* ZWAutoLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWAutoLink.m; sourceTree = "<group>"; };
+		924F6ACE1889D6A700E2A6B6 /* ZWAutoLink-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZWAutoLink-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		924F6AB21889D55000E2A6B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				924F6AB81889D55000E2A6B6 /* Cocoa.framework in Frameworks */,
+				924F6AB71889D55000E2A6B6 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		924F6A8B1889D55000E2A6B6 = {
+			isa = PBXGroup;
+			children = (
+				924F6A9D1889D55000E2A6B6 /* ZWAutoLink */,
+				924F6ABB1889D55000E2A6B6 /* ZWAutoLinkTests */,
+				924F6A961889D55000E2A6B6 /* Frameworks */,
+				924F6A951889D55000E2A6B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		924F6A951889D55000E2A6B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				924F6AB51889D55000E2A6B6 /* ZWAutoLinkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		924F6A961889D55000E2A6B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				924F6A971889D55000E2A6B6 /* Cocoa.framework */,
+				924F6AB61889D55000E2A6B6 /* XCTest.framework */,
+				924F6A991889D55000E2A6B6 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		924F6A991889D55000E2A6B6 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				924F6A9A1889D55000E2A6B6 /* AppKit.framework */,
+				924F6A9B1889D55000E2A6B6 /* CoreData.framework */,
+				924F6A9C1889D55000E2A6B6 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		924F6A9D1889D55000E2A6B6 /* ZWAutoLink */ = {
+			isa = PBXGroup;
+			children = (
+				924F6ACB1889D59100E2A6B6 /* ZWAutoLink.h */,
+				924F6ACC1889D59100E2A6B6 /* ZWAutoLink.m */,
+			);
+			name = ZWAutoLink;
+			path = lib;
+			sourceTree = "<group>";
+		};
+		924F6ABB1889D55000E2A6B6 /* ZWAutoLinkTests */ = {
+			isa = PBXGroup;
+			children = (
+				924F6AC11889D55000E2A6B6 /* ZWAutoLinkTests.m */,
+				924F6ABC1889D55000E2A6B6 /* Supporting Files */,
+			);
+			name = ZWAutoLinkTests;
+			path = tests;
+			sourceTree = "<group>";
+		};
+		924F6ABC1889D55000E2A6B6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				924F6ABD1889D55000E2A6B6 /* ZWAutoLinkTests-Info.plist */,
+				924F6ABE1889D55000E2A6B6 /* InfoPlist.strings */,
+				924F6ACE1889D6A700E2A6B6 /* ZWAutoLink-prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		924F6AB41889D55000E2A6B6 /* ZWAutoLinkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 924F6AC81889D55000E2A6B6 /* Build configuration list for PBXNativeTarget "ZWAutoLinkTests" */;
+			buildPhases = (
+				924F6AB11889D55000E2A6B6 /* Sources */,
+				924F6AB21889D55000E2A6B6 /* Frameworks */,
+				924F6AB31889D55000E2A6B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZWAutoLinkTests;
+			productName = ZWAutoLinkTests;
+			productReference = 924F6AB51889D55000E2A6B6 /* ZWAutoLinkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		924F6A8C1889D55000E2A6B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZW;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Zach Waugh";
+			};
+			buildConfigurationList = 924F6A8F1889D55000E2A6B6 /* Build configuration list for PBXProject "ZWAutoLink" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 924F6A8B1889D55000E2A6B6;
+			productRefGroup = 924F6A951889D55000E2A6B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				924F6AB41889D55000E2A6B6 /* ZWAutoLinkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		924F6AB31889D55000E2A6B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				924F6AC01889D55000E2A6B6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		924F6AB11889D55000E2A6B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				924F6AC21889D55000E2A6B6 /* ZWAutoLinkTests.m in Sources */,
+				924F6ACD1889D59100E2A6B6 /* ZWAutoLink.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		924F6ABE1889D55000E2A6B6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				924F6ABF1889D55000E2A6B6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		924F6AC31889D55000E2A6B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		924F6AC41889D55000E2A6B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		924F6AC91889D55000E2A6B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tests/ZWAutoLink-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "tests/ZWAutoLinkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		924F6ACA1889D55000E2A6B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tests/ZWAutoLink-prefix.pch";
+				INFOPLIST_FILE = "tests/ZWAutoLinkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		924F6A8F1889D55000E2A6B6 /* Build configuration list for PBXProject "ZWAutoLink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				924F6AC31889D55000E2A6B6 /* Debug */,
+				924F6AC41889D55000E2A6B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		924F6AC81889D55000E2A6B6 /* Build configuration list for PBXNativeTarget "ZWAutoLinkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				924F6AC91889D55000E2A6B6 /* Debug */,
+				924F6ACA1889D55000E2A6B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 924F6A8C1889D55000E2A6B6 /* Project object */;
+}
