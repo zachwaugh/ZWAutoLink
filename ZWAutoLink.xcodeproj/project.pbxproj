@@ -12,6 +12,7 @@
 		924F6AC01889D55000E2A6B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 924F6ABE1889D55000E2A6B6 /* InfoPlist.strings */; };
 		924F6AC21889D55000E2A6B6 /* ZWAutoLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 924F6AC11889D55000E2A6B6 /* ZWAutoLinkTests.m */; };
 		924F6ACD1889D59100E2A6B6 /* ZWAutoLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 924F6ACC1889D59100E2A6B6 /* ZWAutoLink.m */; };
+		924F6AD11889DB6F00E2A6B6 /* ZWTextEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 924F6AD01889DB6F00E2A6B6 /* ZWTextEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		924F6ACB1889D59100E2A6B6 /* ZWAutoLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWAutoLink.h; sourceTree = "<group>"; };
 		924F6ACC1889D59100E2A6B6 /* ZWAutoLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWAutoLink.m; sourceTree = "<group>"; };
 		924F6ACE1889D6A700E2A6B6 /* ZWAutoLink-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZWAutoLink-prefix.pch"; sourceTree = "<group>"; };
+		924F6ACF1889DB6F00E2A6B6 /* ZWTextEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWTextEntity.h; sourceTree = "<group>"; };
+		924F6AD01889DB6F00E2A6B6 /* ZWTextEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWTextEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 			children = (
 				924F6ACB1889D59100E2A6B6 /* ZWAutoLink.h */,
 				924F6ACC1889D59100E2A6B6 /* ZWAutoLink.m */,
+				924F6ACF1889DB6F00E2A6B6 /* ZWTextEntity.h */,
+				924F6AD01889DB6F00E2A6B6 /* ZWTextEntity.m */,
 			);
 			name = ZWAutoLink;
 			path = lib;
@@ -175,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				924F6AC21889D55000E2A6B6 /* ZWAutoLinkTests.m in Sources */,
+				924F6AD11889DB6F00E2A6B6 /* ZWTextEntity.m in Sources */,
 				924F6ACD1889D59100E2A6B6 /* ZWAutoLink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +322,7 @@
 				924F6ACA1889D55000E2A6B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

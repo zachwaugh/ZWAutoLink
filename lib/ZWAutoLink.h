@@ -10,6 +10,7 @@
 
 @interface ZWAutoLink : NSObject
 
-+ (NSArray *)URLRangesInText:(NSString *)text;
++ (NSArray *)URLsInText:(NSString *)text;
++ (NSArray *)URLsInText:(NSString *)text options:(NSDictionary *)options;
 
 @end

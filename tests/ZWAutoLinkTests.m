@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "ZWAutoLink.h"
+#import "ZWTextEntity.h"
 
 @interface ZWAutoLinkTests : XCTestCase
 
@@ -15,18 +16,57 @@
 
 @implementation ZWAutoLinkTests
 
-- (void)setUp
+- (void)testAutoLink
 {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+	
 }
 
-- (void)tearDown
+- (void)testAutoLinkWithBrackets
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+	NSString *link;
+	NSRange expected;
+	NSArray *urls;
+	ZWTextEntity *entity;
+	
+	link = @"http://en.wikipedia.org/wiki/Sprite_(computer_graphics)";
+	expected = NSMakeRange(0, link.length);
+	urls = [ZWAutoLink URLsInText:link];
+	entity = urls[0];
+	XCTAssertTrue(urls.count == 1);
+	XCTAssertTrue(NSEqualRanges(entity.range, expected));
+	
+	
+	link = @"http://en.wikipedia.org/wiki/Sprite_[computer_graphics]";
+	expected = NSMakeRange(0, link.length);
+	urls = [ZWAutoLink URLsInText:link];
+	entity = urls[0];
+	XCTAssertTrue(urls.count == 1);
+	XCTAssertTrue(NSEqualRanges(entity.range, expected));
+	
+	
+	link = @"http://en.wikipedia.org/wiki/Sprite_{computer_graphics}";
+	expected = NSMakeRange(0, link.length);
+	urls = [ZWAutoLink URLsInText:link];
+	entity = urls[0];
+	XCTAssertTrue(urls.count == 1);
+	XCTAssertTrue(NSEqualRanges(entity.range, expected));
 }
 
+
+- (void)testAutoLinkOtherProtocols
+{
+	NSString *ftpRaw = @"Download ftp://example.com/file.txt";
+	NSRange range = NSMakeRange(@"Download ".length, 26);
+	
+	NSArray *entities = [ZWAutoLink URLsInText:ftpRaw];
+	ZWTextEntity *entity = entities[0];
+	XCTAssertTrue(entities.count == 1);
+	XCTAssertTrue(entity.type == ZWTextEntityTypeURL);
+	XCTAssertTrue(NSEqualRanges(entity.range, range));
+	
+//	file_scheme = 'file:///home/username/RomeoAndJuliet.pdf'
+
+}
 
 
 @end
