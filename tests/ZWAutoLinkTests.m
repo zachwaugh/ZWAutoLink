@@ -9,7 +9,6 @@
 #import <XCTest/XCTest.h>
 #import "ZWAutoLink.h"
 #import "ZWTextEntity.h"
-#import <AppKit/AppKit.h>
 
 @interface ZWAutoLinkTests : XCTestCase
 
