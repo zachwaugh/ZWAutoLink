@@ -15,9 +15,10 @@ typedef NS_OPTIONS(NSInteger, ZWTextEntityType) {
 
 @interface ZWTextEntity : NSObject
 
-@property (nonatomic, assign) NSRange range;
-@property (nonatomic, assign) ZWTextEntityType type;
+@property (nonatomic, assign, readonly) NSRange range;
+@property (nonatomic, assign, readonly) ZWTextEntityType type;
+@property (nonatomic, copy, readonly) NSString *text;
 
-- (instancetype)initWithRange:(NSRange)range type:(ZWTextEntityType)type;
+- (instancetype)initWithRange:(NSRange)range text:(NSString *)text type:(ZWTextEntityType)type;
 
 @end
