@@ -1,20 +1,30 @@
 ## ZWAutoLink
 
-Objective-C library for auto-linking URLs in text, initially ported from the Rails [auto_link gem](https://github.com/tenderlove/rails_autolink) because I couldn't find an Objective-C library that covered all cases. The API may change until version 1.0.
+Objective-C library for auto-linking URLs in text, initially ported from the Rails [auto_link gem](https://github.com/tenderlove/rails_autolink) because I couldn't find an Objective-C library that covered all cases. The API was inspired by the [twitter-text-objc](https://github.com/twitter/twitter-text-objc) library. The API may change until version 1.0.
 
 ### Usage
 
 ```objc
 
 // Returns an array of ZWTextEntity objects representing urls in the text
-NSArray *urls = [ZWAutoLink URLsInText:@"http://github.com"];
+NSString *text = @"http://github.com";
+NSArray *urls = [ZWAutoLink URLsInText:text];
 ZWTextEntity *entity = urls[0];
 NSLog(@"entity: %@", entity);
 // entity: <ZWTextEntity:0x1005bbd40> text: http://github.com, range: {0, 17}, type: url
 
 ```
 
-From the entities returned, you might create a `NSAttributedString`
+From the entities returned, you might create a `NSAttributedString` with links colored blue:
+
+```objc
+
+NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text];
+for (ZWTextEntity *entity in urls) {
+  [string addAttribute:NSLinkAttributeName value:[NSURL URLWithString:entity.text] range:entity.range];
+  [string addAttribute:NSForegroundColorAttributeName value:[NSColor blueColor] range:entity.range];
+}
+```
 
 
 ### Why not use X?
