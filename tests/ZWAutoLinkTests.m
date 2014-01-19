@@ -78,6 +78,11 @@
 	entity = urls[0];
 	XCTAssertTrue(urls.count == 1);
 	XCTAssertTrue(NSEqualRanges(entity.range, expected), @"Invalid range: %@", entity);
+	
+	
+	urls = [ZWAutoLink URLsInText:@"http://github.com"];
+	entity = urls[0];
+	NSLog(@"entity: %@", entity);
 }
 
 - (void)testAutoLinkOtherProtocols

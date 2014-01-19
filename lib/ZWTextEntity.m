@@ -8,6 +8,20 @@
 
 #import "ZWTextEntity.h"
 
+static NSString * ZWTextEntityStringForType(ZWTextEntityType type)
+{
+	switch (type) {
+		case ZWTextEntityTypeEmail:
+			return @"email";
+			break;
+		case ZWTextEntityTypeURL:
+			return @"url";
+		default:
+			return @"uknown type";
+			break;
+	}
+}
+
 @implementation ZWTextEntity
 
 - (id)init
@@ -29,7 +43,7 @@
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"<%@:%p> text: %@, range: %@, type: %lu", NSStringFromClass(self.class), self, self.text, NSStringFromRange(self.range), self.type];
+	return [NSString stringWithFormat:@"<%@:%p> text: %@, range: %@, type: %@", NSStringFromClass(self.class), self, self.text, NSStringFromRange(self.range), ZWTextEntityStringForType(self.type)];
 }
 
 @end

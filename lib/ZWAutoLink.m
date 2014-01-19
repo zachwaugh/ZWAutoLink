@@ -42,20 +42,21 @@
 		NSMutableString *link = [[NSMutableString alloc] initWithString:[text substringWithRange:range]];
 		NSTextCheckingResult *match = nil;
 		
+		// Remove extra brackets included in url
 		do {
 			match = [r firstMatchInString:link options:0 range:NSMakeRange(0, link.length)];
 			if (match) {
-				NSString *p = [link substringWithRange:match.range];
+				NSString *character = [link substringWithRange:match.range];
 				[link deleteCharactersInRange:match.range];
 				range.length--;
-				NSString *opening = brackets[p];
+				NSString *opening = brackets[character];
 				
 				if (opening) {
 					NSUInteger openingMatches = [self numberOfMatchesOfString:opening inString:link];
-					NSUInteger closingMatches = [self numberOfMatchesOfString:p inString:link];
+					NSUInteger closingMatches = [self numberOfMatchesOfString:character inString:link];
 										
 					if (openingMatches > closingMatches) {
-						[link appendString:p];
+						[link appendString:character];
 						range.length++;
 						break;
 					}
@@ -74,14 +75,17 @@
 										
 + (NSRegularExpression *)autoLinkRegex
 {
-	static NSRegularExpression *regex = nil;
+	static NSRegularExpression *_regex = nil;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
 		NSError *error = nil;
-    regex = [[NSRegularExpression alloc] initWithPattern:REGEX options:0 error:&error];
+    _regex = [[NSRegularExpression alloc] initWithPattern:REGEX options:0 error:&error];
+		if (!_regex) {
+			NSLog(@"error creating regex: %@", error);
+		}
 	});
 	
-	return regex;
+	return _regex;
 }
 
 #pragma mark - Private helpers
