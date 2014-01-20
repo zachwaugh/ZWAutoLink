@@ -29,7 +29,7 @@ for (ZWTextEntity *entity in urls) {
 
 ### Why not use X?
 
-`NSDataDetector` is a good built-in solution, but I found it didn't handle all the cases I needed and there was no configuration available. This has slightly different use cases, but the *rails_autolink* gem seemed like good place to start from a well-tested and widely used approach as opposed to writing my own regex. I plan on adding support for swapping out which "engine" to use, so you can auto-link with the NSDataDetector or your own regex if you prefer, re-use the same 
+`NSDataDetector` is a good built-in solution, but I found it didn't handle all the cases I needed and there was no configuration available. This has slightly different use cases, but the *rails_autolink* gem seemed like good place to start from a well-tested and widely used approach as opposed to writing my own regex. I plan on adding support for swapping out which "engine" to use, so you can auto-link with the NSDataDetector or your own regex if you prefer.
 
 ## To Do
 
